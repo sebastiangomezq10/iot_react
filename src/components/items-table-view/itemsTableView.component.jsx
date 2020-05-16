@@ -2,7 +2,7 @@ import React from 'react';
 import './itemsTableView.style.css';
 import ItemRow from '../item-row/itemrow.component'
 
-const itemsTableView = (props) => {
+const ItemsTableView = (props) => {
     return (
         <div className="items-table">
             <div className="items-table__header">
@@ -12,13 +12,15 @@ const itemsTableView = (props) => {
                 <span> estado</span>
             </div>
             <div>
-                {props.disps.map((disp)=>{
-                    return(                        
-                            <ItemRow key={disp.idDispositivo} disp={disp}></ItemRow>                       
-                    );})}
+                {props.dispositivos.map((disp) => {
+                    return (
+                        <ItemRow key={disp.idDispositivo} dispositivo={disp}>
+                        </ItemRow>
+                    );
+                })}
             </div>
         </div>
     );
 }
 
-export default itemsTableView;
+export default ItemsTableView;

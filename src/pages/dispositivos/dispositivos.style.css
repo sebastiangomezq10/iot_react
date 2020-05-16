@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+.dispositivos-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+}
+.dipositivos-header{
+    flex: 0 0 15%;
+}
+.dispositivos-section{
+     flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+}
+.dispositivos-footer{
+
+    flex: 0 0 15%;
+}
+.bordered-element{
+    border: 1px solid red;
+}
