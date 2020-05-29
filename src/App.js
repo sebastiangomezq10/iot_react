@@ -31,9 +31,9 @@ function App() {
           </Route>
         </div>
         <Redirect from="/" to="/dispositivos" />
-        <footer className="dispositivos-footer bordered-element">
+        {/*<footer className="dispositivos-footer bordered-element">
           Footer
-      </footer>
+        </footer>*/}
       </div>
     </Router>
   );

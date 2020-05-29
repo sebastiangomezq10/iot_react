@@ -21,7 +21,8 @@ import { useState } from 'react';
 const DispositivosView = () => {
     const [dispositivos, setDispositivos] = useState([]);
     const [refresh, setRefreshCount] = useState(false);
-    const [showOn, setshowOn] = useState(false);
+    //const [showOn, setshowOn] = useState(false);
+    const [changeSerch, setChangeSerch] = useState(0);
     const [changeStatus, setChangeStatus] = useState(false);
     const getDisps = async () => {
         const response = await fetch('http://localhost:3001/api/iot/dispositivos');
@@ -35,17 +36,26 @@ const DispositivosView = () => {
         console.log(responseJSON);
         setDispositivos(responseJSON.data);
     }
+    const getDispsOff = async () => {
+        const response = await fetch('http://localhost:3001/api/iot/dispositivos/off');
+        const responseJSON = await response.json();
+        console.log(responseJSON);
+        setDispositivos(responseJSON.data);
+    }
     useEffect(() => {
-        if (showOn) {
+        if (changeSerch === 1) {
             getDispsOn();
-        } else {
+        } else if (changeSerch === 2) { 
+            getDispsOff();
+        } 
+        else {
             getDisps();
         }
-    }, [refresh, showOn, changeStatus]);
+    }, [refresh, changeSerch, changeStatus]);
     return (
         <div className="dispositivos bordered-element">
-            <DispositivosSearch onShowDispOn={(onOff) => {
-                setshowOn(onOff)
+            <DispositivosSearch changeSerch={(changeSerchid) => {
+                setChangeSerch(changeSerchid)
             }}></DispositivosSearch>
             <hr />
             <ItemsTableView changeStatus={() => {

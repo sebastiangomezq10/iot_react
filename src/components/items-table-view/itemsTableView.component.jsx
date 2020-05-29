@@ -14,7 +14,6 @@ const ItemsTableView = (props) => {
                 <span>Disp</span>
                 <span>Descripcion</span>
                 <span>Estado</span>
-
             </div>
             <div>
                 {props.dispositivos.map((disp) => {
