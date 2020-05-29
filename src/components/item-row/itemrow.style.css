@@ -1,17 +1,32 @@
-.disp{
-    display: flex;
-    justify-content: space-between;
-    border: solid red;
+.disp {
+  display: flex;
+  justify-content: space-between;
+  border: solid rgb(0, 92, 134);
+  background-color: #e7e7e7;
 }
-.disp__idDispositivo{
-    
+.disp__idDispositivo {
+    font-size: large;
 }
-.disp__fechaRegistro{
 
+.disp__descripcion {
+    font-size: large;
 }
-.disp__descripcion{
-
+.disp__estado {
 }
-.disp__estado{
+.switch-uncheckedIcon {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: "100%";
+  color: "black";
+  padding-right: 2;
+}
 
+.switch-checkedIcon {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: "100%";
+  padding-right: 2;
+  font-size: medium;
 }

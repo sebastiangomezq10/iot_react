@@ -1,0 +1,11 @@
+.dispositivos {
+  width: 20rem;
+  padding: 0.5rem;
+}
+.add-disp_label {
+  display: block;
+  margin-top: 10px;
+}
+.row {
+    padding: 5px;
+}

@@ -23,6 +23,30 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+* {
+  box-sizing: border-box;
+}
+.dispositivos-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+.dipositivos-header {
+  background-color: #003a5c;
+}
+.view-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.dispositivos-footer {
+  flex: 0 0 15%;
+}
+.bordered-element {
+  border: 1px solid #003a5c;
+}
 
 .App-link {
   color: #61dafb;
@@ -35,4 +59,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: #00a1cb;
+}
+a:link {
+  text-decoration: none;
+}
+.item-menu__link {
+  color: #ffffff;
+}
+.item-menu__link:hover {
+  color: #7e9396;
+}
+.item-menu {
+  background-color: #00637c9f;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.boton {
+  background-color: #029cb1;
+  border-color: #00a1cb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 12px;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.boton:hover {
+  background-color: #007281;
+  color: #bbedf5;
 }

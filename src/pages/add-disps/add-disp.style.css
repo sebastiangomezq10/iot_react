@@ -1,0 +1,6 @@
+.add-disp__section{
+    flex: 1;
+   display: flex;
+   justify-content: center;
+   padding: .5rem;
+}

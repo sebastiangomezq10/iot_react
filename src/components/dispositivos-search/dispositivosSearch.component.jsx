@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './dispositivosSearch.style.css';
 
-const DispositivosSearch = () => {
+const DispositivosSearch = (props) => {
+    const [showInStock, setShowInStock] = useState(false);
+    const { onShowDispOn } = props;
+
     return (
         <div className="dispositivos-search">
-            <form >
-                <div>
-                    <input type="text" placeholder="Search... " />
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    ver dispositivos encendidos 
+            <form >            
+                <div>                
+                    <input type="checkbox" id="check-show-on" checked={showInStock} onChange={(e) => {
+                        setShowInStock(e.target.checked);
+                        onShowDispOn(e.target.checked);
+                    }} />
+                    <label htmlFor="check-show-on">ver dispositivos encendidos</label>
                 </div>
             </form>
         </div>
